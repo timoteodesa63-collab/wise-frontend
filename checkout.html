@@ -23,8 +23,15 @@ Entidade: 10116  -- Referência: 939083721
 
   <p>Depois de pagar, envie o comprovativo (na próxima etapa)</p>
 
-  <button disabled>Continuar</button>
+ <button id="payButton">Continuar</button>
 </form>
+<script>
+  const button = document.getElementById('payButton');
 
+  button.addEventListener('click', function(event) {
+    event.preventDefault();
+    alert('Simulação: pagamento enviado! Envie o comprovativo por WhatsApp.');
+  });
+</script>
 </body>
 </html>
